@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bé tập tính</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-gray-400 flex items-center justify-center h-screen">
+    <main class="bg-white flex flex-col justify-center p-4 rounded-md">
+      <section class="text-center pb-6">
+        <div class="text-2xl">Bé tập tính</div>
+      </section>
+
+      <section>
+        <section class="flex md:flex-row flex-col gap-4">
+          <section class="flex flex-row gap-4 self-center">
+            <section class="flex flex-col gap-3">
+              <div>Số thứ nhất</div>
+              <div>Số thứ hai</div>
+              <div>Kết quả</div>
+            </section>
+
+            <section class="flex flex-col gap-2 shrink">
+              <input
+                type="text"
+                class="border-gray-300 border-2 grow w-full min-w-0"
+                id="firstNumber"
+              />
+              <input
+                type="text"
+                class="border-gray-300 border-2 grow w-full min-w-0"
+                id="secondNumber"
+              />
+              <input
+                type="text"
+                class="border-gray-300 border-2 grow w-full min-w-0"
+                readonly
+                id="result"
+              />
+            </section>
+          </section>
+
+          <section class="flex flex-col gap-3 self-center">
+            <section class="flex flex-row gap-2">
+              <input type="radio" name="operation" value="add" />Cộng
+              <input type="radio" name="operation" value="subtract" />Trừ
+            </section>
+            <section class="flex flex-row gap-2">
+              <input type="radio" name="operation" value="multiply" />Nhân
+              <input type="radio" name="operation" value="div" />Chia
+            </section>
+            <section class="flex justify-center">
+              <button
+                class="bg-blue-500 hover:bg-blue-300 px-4 rounded text-white"
+                id="calculateButton"
+              >
+                Tính
+              </button>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <section class="flex flex-row gap-5 pt-1">
+        <div>Thông báo</div>
+        <div id="notification" class="text-red-500"></div>
+      </section>
+    </main>
+  </body>
+</html>
+<script type="module" src="./script.js"></script>
